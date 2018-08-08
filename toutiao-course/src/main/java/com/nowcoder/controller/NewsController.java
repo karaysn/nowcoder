@@ -58,6 +58,7 @@ public class NewsController {
     @Autowired
     LikeService likeService;
 
+    //资讯详情页
     @RequestMapping(path = {"/news/{newsId}"}, method = {RequestMethod.GET})
     public String newsDetail(@PathVariable("newsId") int newsId, Model model) {
         News news = newsService.getById(newsId);
